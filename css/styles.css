@@ -11268,6 +11268,12 @@ html {
   background-color: #a4cf9f;
   color:white;
 }
+#lgreen-box2 {
+  padding: 2rem !important;
+  background-color: #a4cf9f;
+  color:white;
+  opacity: 70%;
+}
 
 #chef {
   color: white;
@@ -11285,6 +11291,16 @@ html {
 #fundo1 {
 
   background-image: url('../imagens/Fundo2.png');
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#fundo2 {
+
+  background-image: url('../imagens/risotto_grilos2.jpg');
   height:100%;
   background-position: center;
   background-repeat: no-repeat;
