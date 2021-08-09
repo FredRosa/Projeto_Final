@@ -11259,6 +11259,23 @@ html {
   padding-top:95px;
 }
 
+#lgreen-box {
+  padding: 2rem !important;
+  background-color: #a4cf9f;
+  color:white;
+}
+
+#chef {
+  color:black;
+}
+
+#dgreen-box {
+  padding: 2rem !important;
+  background-color: #658062;
+  opacity: 30%; 
+  color: white;
+}
+
 #fundo1 {
 
   background-image: url('../PHOTOSHOP/Fundo2.png');
