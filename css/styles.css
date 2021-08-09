@@ -19,7 +19,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #658062;
-  --bs-body-bg: #e4ffe1; 
+  --bs-body-bg: #f2f4ea; 
 }
 
 *,
@@ -11270,9 +11270,17 @@ html {
 }
 #lgreen-box2 {
   padding: 2rem !important;
-  background-color: #a4cf9f;
-  color:white;
-  opacity: 70%;
+  background-color: #a4cf9fab;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  
+}
+
+#dgreen-box {
+  padding: 2rem !important;
+  background-color: #658062d4;
+  color: white;
 }
 
 #chef {
@@ -11280,12 +11288,6 @@ html {
   text-align: center;
   font-weight: bold;
   font-size: 23px;
-}
-
-#dgreen-box {
-  padding: 2rem !important;
-  background-color: #658062d4;
-  color: white;
 }
 
 #fundo1 {
@@ -11297,12 +11299,15 @@ html {
   background-size: cover;
 }
 
-
 #fundo2 {
 
-  background-image: url('../imagens/risotto_grilos2.jpg');
+  background-image: url('../imagens/fundo6.png');
   height:100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#politica {
+  text-align: center;
 }
