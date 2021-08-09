@@ -7026,6 +7026,10 @@ textarea.form-control-lg {
   align-items: flex-start !important;
 }
 
+.align-items-around {
+  align-items: around !important;
+}
+
 .align-items-end {
   align-items: flex-end !important;
 }
@@ -11266,19 +11270,21 @@ html {
 }
 
 #chef {
-  color:black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 #dgreen-box {
   padding: 2rem !important;
-  background-color: #658062;
-  opacity: 30%; 
+  background-color: #658062d4;
   color: white;
 }
 
 #fundo1 {
 
-  background-image: url('../PHOTOSHOP/Fundo2.png');
+  background-image: url('../imagens/Fundo2.png');
   height:100%;
   background-position: center;
   background-repeat: no-repeat;
