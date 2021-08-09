@@ -7426,23 +7426,7 @@ textarea.form-control-lg {
 
 .p-5 {
   padding: 3rem !important;
-  background-color: #a4cf9f;
-  color:white;
 }
-
-.p-6 {
-  text-align: center;
-  color:black;
-}
-
-
-.p-7 {
-  padding: 3rem !important;
-  background-color: #658062;
-  opacity: 70%; 
-  color: white;
-}
-
 
 .px-0 {
   padding-right: 0 !important;
@@ -11341,4 +11325,21 @@ html {
 
 #section1 {
   padding-top:95px;
+}
+
+#lgreen-box {
+  padding: 2rem !important;
+  background-color: #a4cf9f;
+  color:white;
+}
+
+#chef {
+  color:black;
+}
+
+#dgreen-box {
+  padding: 2rem !important;
+  background-color: #658062;
+  opacity: 70%; 
+  color: white;
 }
