@@ -1,0 +1,19 @@
+body{
+    background-color: #658062;
+    text-align: center;
+}
+
+.admin{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+#lgreen-box2 {
+    padding: 20px;
+    margin: 300px;
+    background-color: #a4cf9fad;
+    color: white;
+    font-weight: bold;
+}
