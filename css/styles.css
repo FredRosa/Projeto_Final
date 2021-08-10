@@ -5924,7 +5924,7 @@ textarea.form-control-lg {
 
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
 }
 .carousel-inner::after {
@@ -5942,6 +5942,7 @@ textarea.form-control-lg {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
+  
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -5994,7 +5995,7 @@ textarea.form-control-lg {
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  top: 0;
+  /*top: 0;*/
   bottom: 0;
   z-index: 1;
   display: flex;
@@ -6035,8 +6036,8 @@ textarea.form-control-lg {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
@@ -11268,13 +11269,13 @@ html {
   background-color: #a4cf9f;
   color:white;
 }
-
 #lgreen-box2 {
   padding: 2rem !important;
   background-color: #a4cf9fab;
   color: white;
   font-weight: bold;
   border-radius: 50px;
+  
 }
 
 #dgreen-box {
@@ -11312,27 +11313,45 @@ html {
   text-align: center;
 }
 
-#quemSomos {
+/*#quemSomos {
   margin-bottom: -96px;
+  }*/
+
+  .titulos{
+    font-size: 50px;
+    color: #a4cf9f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+  }
+  
+  .menu{
+      padding: 2rem !important;
+  }
+  
+  .ementa{
+    color:black;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .linhas{
+    width: 50px; height: 30px;
   }
 
-.titulos{
-  font-size: 50px;
-  color: #a4cf9f;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-align: center;
+
+#fundoslide1{
+
+  background-image: url('../imagens/fundo_slide1.png');
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+
 }
 
-.menu{
-    padding: 2rem !important;
-}
+.imgcar {
 
-.ementa{
-  color:black;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.linhas{
-  width: 50px; height: 30px;
+border-radius:20px;
+
 }
