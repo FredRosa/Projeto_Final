@@ -1,11 +1,11 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
+function plusSlidesav(n) {
   showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
+function currentSlideav(n) {
   showSlides(slideIndex = n);
 }
 
