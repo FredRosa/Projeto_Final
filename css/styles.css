@@ -11456,3 +11456,12 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+#slidecombo{
+
+  width: 80%;
+  margin-top: 145px;
+  margin-left: -120px;
+  border-radius: 20px;
+
+}
