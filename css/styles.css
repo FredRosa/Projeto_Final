@@ -193,7 +193,7 @@ sup {
 }
 
 a {
-  color:#55BF49;
+  color: #CAFFC4;
   text-decoration: underline;
 }
 a:hover {
@@ -11464,4 +11464,15 @@ img {vertical-align: middle;}
   margin-left: -120px;
   border-radius: 20px;
 
+}
+
+#contactos {
+
+  background-color: #658062;
+  color:#CAFFC4
+
+}
+
+.fsmall {
+  font-size: calc(0.375rem + 0.5vw) !important;
 }
