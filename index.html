@@ -53,11 +53,11 @@
                                     Login
                                 </button>
                                 <div class="dropdown-menu text-uppercase" aria-labelledby="dropdownMenuButton"> 
-                                    <a class="dropdown-item" href="#!">Registo Cliente</a>
+                                    <a class="dropdown-item" href="#registo">Registo Cliente</a>
                                     <a class="dropdown-item" href="admin.html">Administrador</a>
                                 </div>
                             </div>
-                                <li class="nav-item"><a class="nav-link" href="#!">Contactos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contactos">Contactos</a></li>
                             </ul>
                         </div>           
         </nav>
@@ -325,6 +325,42 @@
                 <br><br>
             </div>
             </section>
+            <!-- section registo-->
+            <section id="registo">
+                <div class="container px-0 text-justify">
+                  <div class="row align-items-center">
+                    <form class="lgreen-box2 mx-auto d-block"><!-- <form action="/action_page.php" target="_blank" method="get"></form> pagina php -->
+                        <h2>Registo Cliente</h2>
+                          <div class="mb-3">
+                              <label for="inputEmail" class="form-label">Email</label>
+                              <input type="email" class="form-control" placeholder="exemplo@gmail.com" id="email" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                              <label for="inputPassword" class="form-label">Password</label>
+                              <input type="password" class="form-control" placeholder="Password" id="password_reg">
+                              <label for="exampleInputPassword1" class="form-label">Confirme a password</label>
+                              <input type="password" class="form-control" placeholder="Password" id="password_reg">
+                          </div>
+                          <div class="mb-3">
+                                <label for="inputnumber" class="form-label">Contactos</label>
+                                <input type="tel" id="phone" name="telemovel" placeholder="962819398" pattern="[0-9]{9}" size="9">
+                          </div>
+                          <div class="mb-3">
+                            <label for="inputmorada" class="form-label">Morada</label>
+                            <input type="morada" id="morada" name="morada" placeholder="rua">
+                          </div>
+                          <div>
+                            <p>Os seus dados pessoais serão utilizados para melhorar a sua experiência no site e para os propósitos descritos na nossa politica de privacidade</p>
+                            <input type="radio" id="newsletter" name="newsletter" value="newsletter">
+                            <label for="newsletter">Quero subscrever a newsletter</label><br>
+                          </div><br><br>
+                        <button type="submit" class="btn btn-secondary">Registar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>   
+                    </form>
+                  </div>
+                </div>
+              </section>
+
             <!-- section contactos-->
             <section id="contactos">
                 <div class="container-fluid text-justify">
