@@ -11,9 +11,12 @@ body{
 }
 
 #lgreen-box2 {
-    padding: 20px;
-    margin: 300px;
+    padding: 30px;
+    margin-top: 250px;
+    margin-right: 10%;
+    margin-left: 10%;
     background-color: #a4cf9fad;
     color: white;
     font-weight: bold;
+    min-width: 200px;
 }
