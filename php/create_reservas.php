@@ -2,7 +2,7 @@
 
 include("connect.php");
 
-$email = $_POST['email'];
+$email = $_POST['login'];
 $pessoas = $_POST['pessoas']
 $contacto = $_POST['phone'];
 $horario = $_POST['horario'];
