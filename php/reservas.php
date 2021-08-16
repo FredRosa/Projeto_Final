@@ -20,11 +20,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   echo "<table><tr><th>email</th><th>pessoas</th><th>contacto</th><th>horario</th></tr>";
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["email"] . $row["pessoas"] . $row["telemovel"] . $row["horario"] ."</td><td>
+    echo "<tr><td>".$row["email"] . $row["pessoas"] . $row["contacto"] . $row["horario"] ."</td><td>"
     
   }
   echo "</table>";
-} else {
+} 
+else {
   echo "Sem resultados";
 }
 $conn->close();
