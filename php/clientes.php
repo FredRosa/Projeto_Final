@@ -18,7 +18,7 @@ $sql = "SELECT * FROM clientes";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  echo "<table><tr><th>nome</th><th>newsletter</th><th>email</th></tr>";
+  echo "<table><tr><th>nome</th><th>email</th><th>newsletter</th></tr>";
   while($row = $result->fetch_assoc()) {
     echo "<tr><td>".$row["nome"] . $row["email"] . $row["newsletter"] . "</td><td>
     <form action='detail.php' method='post'>
