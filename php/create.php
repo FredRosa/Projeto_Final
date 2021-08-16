@@ -4,16 +4,16 @@ include("connect.php");
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$password= $_POST['password_reg'];
-$contacto = $_POST['phone'];
+$password= $_POST['password'];
+$contacto = $_POST['telemovel'];
 $morada = $_POST['morada'];
 $newsletter = $_POST['newsletter'];
 
 
 
-$query = "INSERT INTO clientes(nome,email,password,contacto,morada,newsletter) VALUES ('$nome','$email', '$password','$contacto', '$morada','$newsletter')";
+$query = "INSERT INTO clientes(nome,email,pass,contacto,morada,newsletter) VALUES ('$nome','$email', '$password','$contacto', '$morada','$newsletter')";
 if (mysqli_query($conn, $query)){
-    header('Location: '.$uri.'clientes.php');
+    header('Location: '.$uri.'../index.html');
 }
 else{
     echo "Error Inserting record: " . $conn->error;

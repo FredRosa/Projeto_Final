@@ -8,7 +8,7 @@ $query = mysqli_query($conn, "SELECT * FROM clientes WHERE email=$email");
 while($result = mysqli_fetch_array($query)){
     $nome = $result['nome'];
     $email = $result['email'];
-    $password = $result['password_reg'];
+    $password = $result['password'];
     $contacto = $result['phone'];
     $morada = $result['morada'];
     $newsletter = $result['newsletter'];
