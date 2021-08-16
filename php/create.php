@@ -11,7 +11,7 @@ $newsletter = $_POST['newsletter'];
 
 
 
-$query = "INSERT INTO clientes(nome,email,contacto,morada,newsletter) VALUES ('$nome','$email','$contacto', '$morada','$newsletter')";
+$query = "INSERT INTO clientes(nome,email,password,contacto,morada,newsletter) VALUES ('$nome','$email', '$password','$contacto', '$morada','$newsletter')";
 if (mysqli_query($conn, $query)){
     header('Location: '.$uri.'clientes.php');
 }
