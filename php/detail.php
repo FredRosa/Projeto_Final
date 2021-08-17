@@ -13,7 +13,7 @@ while($result = mysqli_fetch_array($query)){
     $morada = $result['morada'];
     $newsletter = $result['newsletter'];
 }
-echo "<h1>Detalhes do Cliente</h1>" . "NOME: " . $nome . "<br>EMAIL: " . $email . "<br>PASSWORD: " . $password . "<br>CONTACTO: " . $contacto . "<br>MORADA: " . $morada . "<br>NEWSLETTER: " . $newsletter
+echo "<h1>Detalhes do Cliente</h1>" . "NOME: " . $nome . "<br>EMAIL: " . $email . "<br>PASSWORD: " . $password . "<br>CONTACTO: " . $contacto . "<br>MORADA: " . $morada . "<br>NEWSLETTER: " . $newsletter .
 
 "<br><br><td>
 <form action='delete.php' method='post'>
