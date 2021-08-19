@@ -2969,8 +2969,8 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color:white;
-  background-color: #658062;
-  border-color: #658062;
+  background-color: #6580629a;
+  border-color: #6580628a;
 }
 .btn-secondary:hover {
   color: rgb(255, 255, 255);
@@ -3474,7 +3474,7 @@ textarea.form-control-lg {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #65806271;
+  background-color: #658062;
   background-clip: padding-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -3736,7 +3736,7 @@ textarea.form-control-lg {
 }
 .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(255, 255, 255);
 }
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
   color: #fff;
