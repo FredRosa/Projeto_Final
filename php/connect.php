@@ -1,6 +1,5 @@
 <?php
 
-$filename = '../sql/insecta.sql';
 $db_host = 'localhost';
 $db_username = 'root';
 $db_password = '';

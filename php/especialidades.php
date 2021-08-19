@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet"/>
     </head>
     <body>
 
@@ -16,7 +16,7 @@
 
 include("connect.php");
 
-$sql = "SELECT * FROM menu_almoco";
+$sql = "SELECT * FROM especialidades";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
