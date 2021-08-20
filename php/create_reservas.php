@@ -3,13 +3,15 @@
 include("connect.php");
 
 $email = $_POST['email'];
+$pass = $_POST['pass'];
 $pessoas = $_POST['pessoas']
 $contacto = $_POST['telemovel'];
 $horario = $_POST['horario'];
+$data = $_POST['data'];
 
 
 
-$query = "INSERT INTO reservas(email,pessoas,contacto,horario) VALUES ('$email','$pessoas','$contacto', '$horario')";
+$query = "INSERT INTO reservas(email,pass,pessoas,contacto,horario,data) VALUES ('$email','$pass','$pessoas','$contacto','$horario', '$data')";
 if (mysqli_query($conn, $query)){
     header('Location: '.$uri.'../index.html');
 }

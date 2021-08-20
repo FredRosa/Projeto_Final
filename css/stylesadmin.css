@@ -1,6 +1,11 @@
 body{
-    background-color: #658062;
+    background-color: #335B29;
     text-align: center;
+    background-image: url('../imagens/logotipo_dark.png');
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y:200px;
+    background-size:300px;
 }
 
 .admin{
@@ -21,18 +26,8 @@ body{
     min-width: 200px;
 }
 
-table{
-    color:white;
-}
-
-td{
-    padding:50px;
-}
-
-tr{
-
-}
-
-th{
-
+.btn-primary {
+    color: white;
+    background-color: #6580629a;
+    border-color: #6580628a;
 }
