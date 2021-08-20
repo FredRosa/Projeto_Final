@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Ago-2021 às 15:31
+-- Tempo de geração: 20-Ago-2021 às 11:03
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.8
 
@@ -37,7 +37,6 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`email`, `pass`) VALUES
-('admin.insecta@gmail.com', 'admin'),
 ('admin.insecta@gmail.com', 'admin');
 
 -- --------------------------------------------------------
@@ -60,6 +59,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`nome`, `email`, `pass`, `contacto`, `morada`, `newsletter`) VALUES
+('ana', 'ana@ckk.com', 'asd', '987654321', 'aknjasn', ''),
 ('ana', 'anas@hotmail.com', 'def', '987654321', 'rua do giz', 'new'),
 ('jose rui', 'jrui@gmail.com', 'asd', '987654321', 'rua do padre', ''),
 ('maria ana', 'mariaa@gmail.com', 'asd', '987654321', 'rua da flor', '');
@@ -139,18 +139,13 @@ INSERT INTO `menu_jantar` (`ementa`, `preço`) VALUES
 
 CREATE TABLE `reservas` (
   `email` varchar(50) NOT NULL,
+  `pass` varchar(20) NOT NULL,
   `contacto` varchar(9) NOT NULL,
   `horario` varchar(10) NOT NULL,
+  `data` date NOT NULL,
   `pessoas` int(2) NOT NULL,
   `reserva` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `reservas`
---
-
-INSERT INTO `reservas` (`email`, `contacto`, `horario`, `pessoas`, `reserva`) VALUES
-('anas@hotmail.com', '987654321', 'almoco', 3, 2);
 
 --
 -- Índices para tabelas despejadas
