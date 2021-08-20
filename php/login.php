@@ -1,21 +1,17 @@
 <?php
   
-  include_once('connect.php');
+  include('connect.php');
   
-  $email = $_POST["email"];
-  $password = $_POST["password"];
-  $id=$_POST["id"];
-  $query = mysqli_query($conn, "SELECT * FROM administrador WHERE $id='id'");
-   
-          
-  if(($result = mysqli_fetch_array($query)) && ($email = $result['email']) && ($password = $result['pass'])) {
-      header('Location: '.$uri.'../admin2.html');
-  }
+  $result = mysqli_query($conn, "SELECT * FROM administrador WHERE email='" . $_POST["email"] . "'
+  and pass = '" . $_POST["password"] ."'");
+  $row = mysqli_fetch_array($result);
+  if(is_array($row)) {
+    header('Location: '.$uri.'../admin2.html');
+  }   
+
   else {
-          echo "<script language='javascript'>";
-          echo "alert('Email ou password incorrectas')";
-          echo "</script>";
-          die();
+      echo "Email ou Password invalida!";
+
   }
-      
+
   ?>
