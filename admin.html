@@ -8,15 +8,15 @@
 </head>
 <body>
     <div>
-        <form id="lgreen-box2"><!-- <form action="/action_page.php" target="_blank" method="get"></form> pagina php -->
+        <form id="lgreen-box2" action="php/login.php" target="_blank" method="POST">
             <h2>Secção de Administrador</h2>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="exemplo@gmail.com" id="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" placeholder="exemplo@gmail.com" name="email" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="password1" class="form-label">Password</label>
-                <input type="password" class="form-control" placeholder="Password" id="password"><br><br>
+                <input type="password" class="form-control" placeholder="Password" name="password"><br><br>
             </div>   
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>  
