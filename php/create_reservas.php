@@ -4,8 +4,8 @@ include("connect.php");
 
 $email = $_POST['email'];
 $pass = $_POST['pass'];
-$pessoas = $_POST['pessoas']
-$contacto = $_POST['telemovel'];
+$pessoas = $_POST['pessoas'];
+$contacto = $_POST['contacto'];
 $horario = $_POST['horario'];
 $data = $_POST['data'];
 
