@@ -25,4 +25,6 @@ echo "<h1>Detalhes do Cliente</h1>" . "NOME: " . $nome . "<br>EMAIL: " . $email 
 </form>
 </td>";
 
+$conn->close();
+
 ?>

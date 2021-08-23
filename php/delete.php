@@ -9,4 +9,6 @@ $query = "DELETE FROM clientes WHERE email=$email";
 mysqli_query($conn, $query);
 header('Location: '.$uri.'clientes.php');
 
+$conn->close();
+
 ?>

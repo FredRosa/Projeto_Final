@@ -10,8 +10,12 @@
   }   
 
   else {
-      echo "Email ou Password invalida!";
-
+    echo "<script>     
+    alert('Email ou Password inválida!')
+    window.location.replace('../admin.html');
+    </script>";
   }
+  
+  $conn->close();
 
   ?>

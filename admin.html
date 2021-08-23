@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-        <form id="lgreen-box2" action="php/login.php" target="_blank" method="POST">
+        <form id="lgreen-box2" action="php/login.php" target="hidden-form" method="POST">
             <h2>Secção de Administrador</h2>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -20,6 +20,13 @@
             </div>   
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>  
+        <iframe style="display:none" name="hidden-form"></iframe>  
     </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    
 </body>
 </html>

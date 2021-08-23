@@ -19,4 +19,6 @@ else{
     echo "Error Inserting record: " . $conn->error;
 }
 
+$conn->close();
+
 ?>

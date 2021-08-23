@@ -11,6 +11,8 @@ while($result = mysqli_fetch_array($query)){
     $preco = $result['preço'];
 }
 
+$conn->close();
+
 ?>
 
 <html>
