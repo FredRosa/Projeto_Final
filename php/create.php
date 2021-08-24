@@ -13,7 +13,7 @@ $newsletter = $_POST['newsletter'];
 
 $query = "INSERT INTO clientes(nome,email,pass,contacto,morada,newsletter) VALUES ('$nome','$email', '$password','$contacto', '$morada','$newsletter')";
 if (mysqli_query($conn, $query)){
-    header('Location: '.$uri.'../index.php');
+    header('Location: '.$uri.'../index.php#reservas');
 }
 else{
     echo "Error Inserting record: " . $conn->error;
