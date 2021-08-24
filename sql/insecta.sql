@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Ago-2021 às 11:03
+-- Tempo de geração: 24-Ago-2021 às 14:14
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.8
 
@@ -29,15 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrador` (
   `email` varchar(40) NOT NULL,
-  `pass` varchar(40) NOT NULL
+  `pass` varchar(40) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `administrador`
 --
 
-INSERT INTO `administrador` (`email`, `pass`) VALUES
-('admin.insecta@gmail.com', 'admin');
+INSERT INTO `administrador` (`email`, `pass`, `id`) VALUES
+('admin.insecta@gmail.com', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -72,20 +73,21 @@ INSERT INTO `clientes` (`nome`, `email`, `pass`, `contacto`, `morada`, `newslett
 
 CREATE TABLE `especialidades` (
   `ementa` text NOT NULL,
-  `preço` float NOT NULL
+  `preço` varchar(6) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `especialidades`
 --
 
-INSERT INTO `especialidades` (`ementa`, `preço`) VALUES
-('Risotto do Mar com Gafanhotos Crocantes', 40.9),
-('Vieiras com Alcachofra e Lagartas Crocantes', 40.9),
-('Tiramissu de Bichos-da-seda', 18.5),
-('Nachos Com Bichos-da-seda e Molho de Iogurte e Salsa', 27.9),
-('Tortellini com Molho de Tomate Cremoso e Grilos Brancos', 40.9),
-('Salada de Verduras Selvagens com Grilos e Gafanhotos Fritos', 27.9);
+INSERT INTO `especialidades` (`ementa`, `preço`, `id`) VALUES
+('Risotto do Mar com Gafanhotos Crocantes', '40.90€', 1),
+('Vieiras com Alcachofra e Lagartas Crocantes', '40.90€', 2),
+('Tiramissu de Bichos-da-seda', '18.50€', 3),
+('Nachos Com Bichos-da-seda e Molho de Iogurte e Salsa', '27.90€', 4),
+('Tortellini com Molho de Tomate Cremoso e Grilos Brancos', '40.90€', 5),
+('Salada de Verduras Selvagens com Grilos e Gafanhotos Fritos', '27.90€', 6);
 
 -- --------------------------------------------------------
 
@@ -95,19 +97,20 @@ INSERT INTO `especialidades` (`ementa`, `preço`) VALUES
 
 CREATE TABLE `menu_almoco` (
   `ementa` text NOT NULL,
-  `preço` float NOT NULL
+  `preço` varchar(6) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `menu_almoco`
 --
 
-INSERT INTO `menu_almoco` (`ementa`, `preço`) VALUES
-('Creme de Castanhas c/ lagarta e bamboo', 22.5),
-('Massa fresca de grilo c/ pesto e chouriço', 27.9),
-('Ravioli de caranguejo e escaravelho gigante', 38.9),
-('Petit Gatêau de chocolate c/ grilos caramelizados', 12.9),
-('Especialidade do dia', 40.9);
+INSERT INTO `menu_almoco` (`ementa`, `preço`, `id`) VALUES
+('Creme de Castanhas c/ lagarta e bamboo', '22.50€', 1),
+('Massa fresca de grilo c/ pesto e chouriço', '27.90€', 2),
+('Ravioli de caranguejo e escaravelho gigante', '38.90€', 3),
+('Petit Gatêau de chocolate c/ grilos caramelizados', '12.90€', 4),
+('Especialidade do dia', '40.90€', 5);
 
 -- --------------------------------------------------------
 
@@ -117,19 +120,20 @@ INSERT INTO `menu_almoco` (`ementa`, `preço`) VALUES
 
 CREATE TABLE `menu_jantar` (
   `ementa` text NOT NULL,
-  `preço` float NOT NULL
+  `preço` varchar(6) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `menu_jantar`
 --
 
-INSERT INTO `menu_jantar` (`ementa`, `preço`) VALUES
-('Salada de manga, carabineiro e larvas crocantes', 22.5),
-('Creme de cenoura c/ crocantes de formigas', 20.9),
-('Naco de vitela c/ puré de abóbora e vespas', 38.9),
-('Brownie de noz c/ mel e abelha crocante', 12.9),
-('Especialidade do dia', 40.9);
+INSERT INTO `menu_jantar` (`ementa`, `preço`, `id`) VALUES
+('Salada de manga, carabineiro e larvas crocantes', '22.50€', 1),
+('Creme de cenoura c/ crocantes de formigas', '20.90€', 2),
+('Naco de vitela c/ puré de abóbora e vespas', '38.90€', 3),
+('Brownie de noz c/ mel e abelha crocante', '12.90€', 4),
+('Especialidade do dia', '40.90€', 5);
 
 -- --------------------------------------------------------
 
@@ -148,14 +152,46 @@ CREATE TABLE `reservas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `reservas`
+--
+
+INSERT INTO `reservas` (`email`, `pass`, `contacto`, `horario`, `data`, `pessoas`, `reserva`) VALUES
+('jrui@gmail.com', 'asd', '123456789', 'almoco', '2021-08-21', 3, 4),
+('anas@hotmail.com', '', '987654321', 'almoco', '0000-00-00', 3, 5);
+
+--
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`email`);
+
+--
+-- Índices para tabela `especialidades`
+--
+ALTER TABLE `especialidades`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `menu_almoco`
+--
+ALTER TABLE `menu_almoco`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `menu_jantar`
+--
+ALTER TABLE `menu_jantar`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `reservas`
@@ -169,10 +205,34 @@ ALTER TABLE `reservas`
 --
 
 --
+-- AUTO_INCREMENT de tabela `administrador`
+--
+ALTER TABLE `administrador`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `especialidades`
+--
+ALTER TABLE `especialidades`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de tabela `menu_almoco`
+--
+ALTER TABLE `menu_almoco`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de tabela `menu_jantar`
+--
+ALTER TABLE `menu_jantar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de tabela `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para despejos de tabelas

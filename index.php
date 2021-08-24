@@ -127,21 +127,20 @@
                                 </tr>
                             </thead>
                             <tbody class="container-fluid ementa">
-                                <tr>
-                                    <td>Creme de Castanhas c/ lagarta e bamboo .................. 22.50€</td>
-                                </tr>
-                                <tr>
-                                    <td >Massa fresca de grilo c/ pesto e chouriço ................... 27.90€</td>
-                                </tr>
-                                <tr>
-                                    <td>Ravioli de caranguejo e escaravelho gigante .............. 38.90€</td>
-                                </tr>
-                                <tr>
-                                    <td>Petit Gatêau de chocolate c/  grilos caramelizados .... 12.90€</td>
-                                </tr>
-                                <tr>
-                                <td>Especialidade do dia ....................................................... 40.90€</td>
-                                </tr>
+                                <?php
+
+                                include("php/connect.php");
+
+                                $sql = "SELECT * FROM menu_almoco";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+
+                                while($row = $result->fetch_assoc()) {
+                                        echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>";
+                                      }
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -153,21 +152,20 @@
                                 </tr>
                             </thead>
                             <tbody class="container-fluid ementa">
-                                <tr>
-                                    <td>Salada de manga, carabineiro e larvas crocantes .... 22.50€</td>
-                                </tr>
-                                <tr>
-                                    <td>Creme de cenoura c/ crocantes de formigas ............ 20.90€</td>
-                                </tr>
-                                <tr>
-                                    <td>Naco de vitela c/ puré de abóbora e vespas .............. 38.90€</td>
-                                </tr>
-                                <tr>
-                                    <td>Brownie de noz c/ mel e abelha crocante .................. 12.90€</td>
-                                </tr>
-                                <tr>
-                                    <td>Especialidade do dia ..................................................... 40.90€</td>
-                                </tr>
+                            <?php
+
+                            include("php/connect.php");
+
+                            $sql = "SELECT * FROM menu_jantar";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+
+                            while($row = $result->fetch_assoc()) {
+                                    echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>";
+                                }
+                                }
+                            ?>
                             </tbody>
                         </table>
                     </div>
@@ -235,7 +233,7 @@
                     </div>
                     <div class="col-lg-6 order-lg-1 p-5" id="fundo2">
                         <div class="sobre_nos lgreen-box2">
-                            <form id="reservas" action="php/create_reservas.php" target="hidden-form" method="POST">                               
+                            <form id="reservas" action="php/create_reservas.php" method="POST">                               
                                 <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">Email</label>
                                   <input type="email" class="form-control" placeholder="exemplo@gmail.com" name="email" aria-describedby="emailHelp">
@@ -265,8 +263,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-secondary">Confirmar</button>
                                 <button type="reset" class="btn btn-secondary">Limpar</button>
-                              </form>  
-                            <iframe style="display:none" name="hidden-form"></iframe>   
+                              </form>    
                         </div>
                     </div>
                 </div>
