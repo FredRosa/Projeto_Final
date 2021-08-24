@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($result);
                 echo 
                 "<script>     
                 alert('Reserva feita com sucesso!');
-                window.location.replace('../index.html#reservas');
+                window.location.replace('../index.php#reservas');
                 </script>";
             }
             else{
@@ -34,7 +34,7 @@ $row = mysqli_fetch_array($result);
         
         echo "<script>     
         alert('Email ou Password inválida!')
-        window.location.replace('../index.html#reservas');
+        window.location.replace('../index.php#reservas');
         </script>";
 
     }
