@@ -3,11 +3,11 @@
 include("connect.php");
 
 $id = $_POST['id'];
-$nome = $_POST['nome'];
-$idade = $_POST['idade'];
+$ementa = $_POST['ementa'];
+$preco = $_POST['preço'];
 
-mysqli_query($conn, "UPDATE escola SET nome='$nome',idade='$idade' WHERE id=$id");
-header("Location: tabela.php");
+mysqli_query($conn, "UPDATE menu_almoco SET ementa='$ementa',preço='$preco' WHERE id=$id");
+header("Location: menu_almoco.php");
 
 $conn->close();
 

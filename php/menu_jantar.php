@@ -53,7 +53,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   echo "<table><tr><th>ementa</th><th>preço</th></tr>";
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>";
+    echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>
+    <td>
+    <form action='editar_menu_jantar.php' method='post'>
+
+        <input name='id' value='" . $row["id"] . "' hidden>
+
+        <button type='submit' name='update' value='update'>Editar</button>
+
+    </form>
+
+    </td>";
   }
   echo "</table> <br> <button onclick=document.location='../admin2.html'>voltar</button>";
 } else {
