@@ -162,7 +162,7 @@
                             if ($result->num_rows > 0) {
 
                             while($row = $result->fetch_assoc()) {
-                                    echo "<tr><tdstyle='text-align:left'>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>";
+                                    echo "<tr><td style='text-align:left'>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>";
                                 }
                                 }
                             ?>
