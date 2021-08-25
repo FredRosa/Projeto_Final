@@ -10,6 +10,20 @@ $contacto = $_POST['telemovel'];
 $morada = $_POST['morada'];
 $newsletter = $_POST['newsletter'];
 
+
+$emailDB = mysqli_query($conn, "SELECT email FROM clientes");
+$row = mysqli_fetch_array($emailDB);
+
+if (is_array($row)) {
+
+    echo
+    "<script>     
+    alert('Email já registado');
+    window.location.replace('../index.php#registo');
+    </script>";
+
+}
+
 if ($password != $password2){
     echo
     "<script>     

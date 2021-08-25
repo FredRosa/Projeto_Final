@@ -53,7 +53,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   echo "<table><tr><th>ementa</th><th>preço</th> </tr>";
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td></tr>
+    echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td>
     <td>
     <form action='editar_menu_almoco.php' method='post'>
 
@@ -63,7 +63,8 @@ if ($result->num_rows > 0) {
 
     </form>
 
-    </td>";
+    </td>
+    </tr>";
   }
   echo "</table> <br> <button onclick=document.location='../admin2.html'>voltar</button>";
 } else {
