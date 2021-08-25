@@ -14,7 +14,7 @@ $result = mysqli_query($conn, "SELECT * FROM clientes WHERE email='" . $_POST["e
 $row = mysqli_fetch_array($result);
 
     if(is_array($row)){
-        $query = "INSERT INTO reservas(email,pessoas,contacto,horario) VALUES ('$email','$pessoas','$contacto','$horario')";
+        $query = "INSERT INTO reservas(email,pessoas,contacto,horario,data) VALUES ('$email','$pessoas','$contacto','$horario','$data')";
             if (mysqli_query($conn, $query)){
                 echo 
                 "<script>     
