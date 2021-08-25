@@ -51,9 +51,9 @@ $sql = "SELECT * FROM reservas";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  echo "<table><tr><th>email</th><th>pessoas</th><th>contacto</th><th>horario</th></tr>";
+  echo "<table><tr><th>email</th><th>pessoas</th><th>contacto</th><th>data</th><th>horario</th></tr>";
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["email"] . "</td> <td>" .$row["pessoas"] . "</td> <td>" . $row["contacto"] . "</td> <td>" . $row["horario"] ."</td>";
+    echo "<tr><td>".$row["email"] . "</td> <td>" .$row["pessoas"] . "</td> <td>" . $row["contacto"] . "</td> <td>" . $row["data"] ."</td> <td>" . $row["horario"] ."</td>";
     
   }
   echo "</table> <br> <button onclick=document.location='../admin2.html'>voltar</button>";
