@@ -33,7 +33,7 @@ $row = mysqli_fetch_array($result);
     else{
         
         echo "<script>     
-        alert('Email ou Password inválida!')
+        alert('Registe-se no site ou verifique se a password está correcta!')
         window.location.replace('../index.php#reservas');
         </script>";
 

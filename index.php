@@ -339,13 +339,13 @@
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">Password</label><br>
-                                    <input type="password" placeholder="Password" class="form-bg" name="password">
+                                    <input type="password" id="password" placeholder="Password" class="form-bg" name="password">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="inputPasswordconfirm" class="form-label">Confirme a password</label><br>
-                                    <input type="password" placeholder="Password" class="form-bg" name="password">
+                                    <input type="password" id="password_confirm" placeholder="Password" class="form-bg" name="password_confirm">
                                 </div>
                             </div>
                         </div>
@@ -371,7 +371,8 @@
                         </div>
                           <div>
                             <p>Os seus dados pessoais serão utilizados para melhorar a sua experiência no site e para os propósitos descritos na nossa politica de privacidade</p>
-                            <input type="radio" id="newsletter" name="newsletter" value="newsletter">
+                            <input type="hidden" name="newsletter" value="Não" />
+                            <input type="radio" id="newsletter" name="newsletter" value="Sim">
                             <label for="newsletter">Quero subscrever a newsletter</label><br>
                           </div><br><br>
                         <div class="col-lg-3 pt-3">
