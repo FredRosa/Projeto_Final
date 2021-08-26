@@ -1,6 +1,6 @@
 <html>
     <head>
-
+    <meta name="viewport" content="width=device-width">
     <style type="text/css">
         table {
         margin: 8px;
@@ -39,7 +39,7 @@
           border-color: #55BF49;;
         }
 
-</style>
+  </style>
 
     </head>
 

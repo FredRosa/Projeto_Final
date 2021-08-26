@@ -1,5 +1,6 @@
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <style type="text/css">
         table {
         margin: 8px;
@@ -34,8 +35,8 @@
 
         button:hover {
           color: rgb(255, 255, 255);
-          background-color: #55BF49;;
-          border-color: #55BF49;;
+          background-color: #55BF49;
+          border-color: #55BF49;
         }
 
 </style>
@@ -51,7 +52,7 @@ $sql = "SELECT * FROM menu_almoco";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  echo "<table><tr><th>ementa</th><th>preço</th> </tr>";
+  echo "<table><tr><th>ementa</th><th>preço</th></tr>";
   while($row = $result->fetch_assoc()) {
     echo "<tr><td>".$row["ementa"]."</td><td>".$row["preço"] . "</td>
     <td>
