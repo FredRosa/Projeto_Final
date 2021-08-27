@@ -233,7 +233,7 @@
                     </div>
                     <div class="col-lg-6 order-lg-1 p-5" id="fundo2">
                         <div class="sobre_nos lgreen-box2">
-                            <form id="reservas" action="php/create_reservas.php" method="POST">                               
+                            <form id="reservas" action="" method="POST">                               
                                 <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">Email</label>
                                   <input type="email" class="form-control" placeholder="exemplo@gmail.com" name="email" aria-describedby="emailHelp">
@@ -251,6 +251,7 @@
                                     <input type="tel" name="contacto" placeholder="962819398" pattern="[0-9]{9}" size="9">
                                 </div>
                                 <p>Horario:</p>
+                                <input type="hidden" name="horario" value="0" />
                                   <input type="radio" id="almoco" name="horario" value="almoco">
                                   <label for="almoco">Almoço</label><br>
                                   <input type="radio" id="jantar" name="horario" value="jantar">
@@ -261,8 +262,56 @@
                                     <label for="exampleInputdata" class="form-label">Data</label>
                                     <input type="date"  name="data">
                                 </div>
-                                <button type="submit" class="btn btn-secondary">Confirmar</button>
+                                <button type="submit" name="submit" class="btn btn-secondary">Confirmar</button>
                                 <button type="reset" class="btn btn-secondary">Limpar</button>
+                                <?php
+
+                                    if (isset($_POST['submit'])){
+                                        include("php/connect.php");
+
+                                        $email = $_POST['email'];
+                                        $pass = $_POST['pass'];
+                                        $pessoas = $_POST['pessoas'];
+                                        $contacto = $_POST['contacto'];
+                                        $horario = $_POST['horario'];
+                                        $data = $_POST['data'];
+
+                                        $result = mysqli_query($conn, "SELECT * FROM clientes WHERE email='" . $_POST["email"] . "'
+                                        and pass = '" . $_POST["pass"] ."'");
+                                        $row = mysqli_fetch_array($result);
+
+                                            if(is_array($row)){
+                                                $query = "INSERT INTO reservas(email,pessoas,contacto,horario,data) VALUES ('$email','$pessoas','$contacto','$horario','$data')";
+                                                    if (mysqli_query($conn, $query)){
+                                                        echo '</br></br>
+                                                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                         Reserva feita com sucesso!
+                                                         <button type="button" class="btn-secondary close" data-dismiss="alert" aria-label="Close">
+                                                         <span aria-hidden="true">&times;</span>
+                                                         </button>
+                                                         </div>';
+                                                    }
+                                                    else{
+                                                    
+                                                    echo "Erro ao inserir os seus dados, entre em contacto connosco";
+                                                }
+
+
+                                            }
+
+                                            else{
+                                                echo '</br></br>
+                                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                Registe-se no site ou verifique se a password está correcta!
+                                                    <button type="button" class="btn-secondary close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>';
+                                                
+                                        $conn->close();
+                                        }
+                                    }
+                                ?>   
                               </form>    
                         </div>
                     </div>
@@ -325,7 +374,7 @@
             </section>
             <!-- section registo-->
             <section id="registo">
-                <form class="mx-auto d-block" form action="php/create.php" target="_blank" method="POST">
+                <form class="mx-auto d-block" form action="" method="POST">
                 <div class="container p-5 text-justify">
                   <div class="row align-items-center lgreen-box2">
                         <h2>Registo Cliente</h2>
@@ -377,11 +426,67 @@
                           </div><br><br>
                         <div class="col-lg-3 pt-3">
                             
-                        <button type="submit" class="btn btn-secondary">Registar</button>
-                        <button type="reset" class="btn btn-secondary">Limpar</button>   
+                        <button type="submit" name="submit2" class="btn btn-secondary">Registar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>  
+                        
                     </div>
                   </div>
+                  <?php
+                    if (isset($_POST['submit2'])){
+                    include("php/connect.php");
+
+                    $nome = $_POST['nome'];
+                    $email = $_POST['email'];
+                    $password= $_POST['password'];
+                    $password2 = $_POST['password_confirm'];
+                    $contacto = $_POST['telemovel'];
+                    $morada = $_POST['morada'];
+                    $newsletter = $_POST['newsletter'];
+
+
+                    $emailDB = mysqli_query($conn, "SELECT email FROM clientes");
+                    $row = mysqli_fetch_array($emailDB);
+
+                    if ($password != $password2){
+                        echo '</br></br>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        As passwords não coincidem!
+                            <button type="button" class="btn-secondary close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>';
+                    }
+
+                    else {
+                        
+                        $query = "INSERT INTO clientes(nome,email,pass,contacto,morada,newsletter) VALUES ('$nome','$email', '$password','$contacto', '$morada','$newsletter')";
+                        if (mysqli_query($conn, $query)){
+
+                            echo '</br></br>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            Registo efetuado com sucesso!
+                            <button type="button" class="btn-secondary close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>';
+                        }
+                        else{
+                            echo '</br></br>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            Esse email já se encontra registado!
+                            <button type="button" class="btn-secondary close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>';
+                        }
+                    }
+
+                    $conn->close();
+                }
+                ?> 
                 </div>
+
+                
             </form>
               </section>
 
