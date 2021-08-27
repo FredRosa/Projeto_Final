@@ -60,9 +60,9 @@ if ($result->num_rows > 0) {
 
     <input name='email' value='" . $row["email"] ."' hidden>
 
-    <button type='submit' name='delete' value='delete'>Delete</button>
+    <button type='submit' name='delete' value='delete'>Eliminar</button>
 
-</form>
+    </form>
     </tr>";
   }
   echo "</table> <br> <button onclick=document.location='../admin2.html'>voltar</button>";
