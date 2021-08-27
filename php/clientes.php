@@ -1,6 +1,6 @@
 <html>
     <head>
-    <meta name="viewport" content="width=device-width">
+
     <style type="text/css">
         table {
         margin: 8px;
@@ -39,10 +39,12 @@
           border-color: #55BF49;;
         }
 
-  </style>
+</style>
 
     </head>
-
+<body>
+<meta name="viewport" content="width=device-width">
+</body>
 </html>
 
 <?php
@@ -57,12 +59,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "<tr style='padding:5px; border-style:solid'><td>".$row["nome"] ."</td> <td>" . $row["email"] . "</td> <td>" . $row["contacto"] . "</td> <td>". $row["morada"] . "</td> <td>". $row["newsletter"] . "</td><td>
     <form action='delete.php' method='post'>
-
     <input name='email' value='" . $row["email"] ."' hidden>
 
     <button type='submit' name='delete' value='delete'>Eliminar</button>
 
-    </form>
+</form>
     </tr>";
   }
   echo "</table> <br> <button onclick=document.location='../admin2.html'>voltar</button>";

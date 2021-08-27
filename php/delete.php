@@ -2,13 +2,14 @@
 
 include("connect.php");
 
-$email=$_POST['email'];
+$db = mysqli_select_db($conn, 'insecta');
 
-$query = "DELETE * FROM clientes WHERE email=$email";
-
-mysqli_query($conn, $query);
-header("Location: clientes.php");
-
+if(isset($_POST['delete']))
+{
+    $email = $_POST['email'];
+    $query = "DELETE FROM `clientes` WHERE `email`='$email'";
+    $query_run = mysqli_query($conn,$query);
+    header("Location: clientes.php");    
+}
 $conn->close();
-
 ?>
