@@ -236,19 +236,19 @@
                             <form id="reservas" action="" method="POST">                               
                                 <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">Email</label>
-                                  <input type="email" class="form-control" placeholder="exemplo@gmail.com" name="email" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control" placeholder="exemplo@gmail.com" name="email" aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputpassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" placeholder="" name="pass" aria-describedby="pass">
+                                    <input type="password" class="form-control" placeholder="" name="pass" aria-describedby="pass" required>
                                   </div>
                                 <div class="mb-3">
                                   <label for="exampleInputnumber" class="form-label">Numero de Pessoas</label>
-                                  <input type="number" class="form-control" name="pessoas" placeholder="1 - 20" min="1" max="20" size="2">
+                                  <input type="number" class="form-control" name="pessoas" placeholder="1 - 20" min="1" max="20" size="2" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputnumber" class="form-label">Contactos</label>
-                                    <input type="tel" name="contacto" placeholder="962819398" pattern="[0-9]{9}" size="9">
+                                    <input type="tel" name="contacto" placeholder="962819398" pattern="[0-9]{9}" size="9" required>
                                 </div>
                                 <p>Horario:</p>
                                 <input type="hidden" name="horario" value="0" />
@@ -260,7 +260,7 @@
                                   <label for="takeaway">Takeaway</label><br><br>
                                 <div class="mb-3">
                                     <label for="exampleInputdata" class="form-label">Data</label>
-                                    <input type="date"  name="data">
+                                    <input type="date" name="data" required>
                                 </div>
                                 <button type="submit" name="submit" class="btn btn-secondary">Confirmar</button>
                                 <button type="reset" class="btn btn-secondary">Limpar</button>
@@ -382,19 +382,19 @@
                              <div class="row">
                                  <div class="mb-3">
                                     <label for="nome" class="form-label">Nome</label><br>
-                                    <input type="text" placeholder="João Miguel" class="form-bg" name="nome">
+                                    <input type="text" placeholder="João Miguel" class="form-bg" name="nome" required>
                                 </div>
                              </div>
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">Password</label><br>
-                                    <input type="password" id="password" placeholder="Password" class="form-bg" name="password">
+                                    <input type="password" id="password" placeholder="Password" class="form-bg" name="password" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="inputPasswordconfirm" class="form-label">Confirme a password</label><br>
-                                    <input type="password" id="password_confirm" placeholder="Password" class="form-bg" name="password_confirm">
+                                    <input type="password" id="password_confirm" placeholder="Password" class="form-bg" name="password_confirm" required>
                                 </div>
                             </div>
                         </div>
@@ -402,13 +402,13 @@
                         <div class="row">
                           <div class="mb-3">
                               <label for="inputEmail" class="form-label">Email</label><br>
-                              <input type="email" placeholder="exemplo@gmail.com" class="form-bg" name="email" aria-describedby="emailHelp">
+                              <input type="email" placeholder="exemplo@gmail.com" class="form-bg" name="email" aria-describedby="emailHelp" required>
                           </div>
                         </div>
                           <div class="row">
                           <div class="mb-3">
                                 <label for="inputnumber" class="form-label">Contactos</label><br>
-                                <input type="tel" id="phone" name="telemovel" placeholder="962819398" class="form-bg" pattern="[0-9]{9}" size="9">
+                                <input type="tel" id="phone" name="telemovel" placeholder="962819398" class="form-bg" pattern="[0-9]{9}" size="9" required>
                           </div>
                         </div>
                           <div class="row">
